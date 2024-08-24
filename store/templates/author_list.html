@@ -1,0 +1,14 @@
+<h1>Authors</h1>
+<ul>
+{% for author in author_list %}
+<li><a  href={% url 'author_detail' author.pk %}>{{ author.first_name }} {{author.last_name}}</a></li>
+{% endfor %}
+</ul>
+<br>
+<form action="{% url 'author_search_results' %}" method="get">
+    <input type="search" name="result" placeholder="Search" aria-\
+    label="Search" >
+    <button type="submit">Search</button>
+</form>
+<br>
+<p><a href="{% url 'author_new' %}">+Add Author</a></p>

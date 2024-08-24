@@ -1,0 +1,15 @@
+<h1>books</h1>
+<ul>
+{% for book in book_list %}
+<li><a  href={% url 'book_detail' pk=author_pk pk2=book.pk %}>{{ book.title }}</a></li>
+{% endfor %}
+</ul>
+<form action="{% url 'book_search_results' pk=author_pk%}" method="get">
+    <input type="search" name="result" placeholder="Search" aria-\
+    label="Search" >
+    <button type="submit">Search</button>
+</form>
+<br>
+<p><a href="{% url 'book_new' author_pk %}">+Add Book</a></p>
+<br>
+<p><a href="{% url 'author_detail' author_pk %}">back to author</a></p>

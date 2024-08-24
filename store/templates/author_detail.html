@@ -1,0 +1,10 @@
+<h2>name: {{ author.first_name }} {{ author.last_name }}</h2>
+<h3>identity_code: {{ author.identity_code }}</h3>
+<h4>age: {{ author.age }}</h4>
+<p><a href="{% url 'book_list' author.pk %}">books</a></p>
+<br>
+<p><a href="{% url 'author_edit' author.pk %}">+ Edit Author</a></p>
+<br>
+<p><a href="{% url 'author_delete' author.pk %}">+ Delete Author</a></p>
+<br>
+<p><a href="{% url 'author_list' %}">back to authors' list</a></p>

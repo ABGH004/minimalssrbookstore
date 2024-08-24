@@ -1,0 +1,5 @@
+<h1>Search Results</h1>
+{% for author in author_list %}
+<h3><a href="{{ author.get_absolute_url }}">{{ author.first_name }} {{author.last_name}}</a></h3>
+<p>identity_code: {{ author.identity_code }}</p>
+{% endfor %}
